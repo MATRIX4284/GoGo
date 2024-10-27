@@ -1,0 +1,454 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.50.242:8501
+
+2024-10-26 19:41:25.541 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connection.py", line 441, in request
+    self.endheaders()
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/http/client.py", line 1293, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/http/client.py", line 1052, in _send_output
+    self.send(msg)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/http/client.py", line 990, in send
+    self.connect()
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x737181b278d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /uploadfile/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x737181b278d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 38, in <module>
+    response2 = requests.post(parser_url,files=files)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /uploadfile/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x737181b278d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-10-26 19:41:53.481 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+2024-10-26 19:41:53.539 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+2024-10-26 19:41:55.487 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+2024-10-26 19:41:55.543 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+2024-10-26 19:41:57.484 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+2024-10-26 19:41:58.486 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+2024-10-26 19:42:01.491 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 455, in __getitem__
+    return self._getitem(widget_id, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 500, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/streamlit_UI_fastapi_based_file_uploader_for_parsing.py", line 17, in <module>
+    option = st.selectbox(
+             ^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 240, in selectbox
+    return self._selectbox(
+           ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/elements/widgets/selectbox.py", line 307, in _selectbox
+    session_state = get_session_state().filtered_state
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/safe_session_state.py", line 89, in filtered_state
+    return self._state.filtered_state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 408, in filtered_state
+    state[k] = self[k]
+               ~~~~^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/streamlit/runtime/state/session_state.py", line 457, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "$$WIDGET_ID-9be81a1556e6d6d3225fae2152029880-None". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+INFO:     Will watch for changes in these directories: ['/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [29147] using StatReload
+INFO:     Started server process [29149]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Kubernetes_in_Action
+INFO:     127.0.0.1:46342 - "POST /uploadfile/ HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/Fast_Api_Server_for_PDF_Parsing.py", line 106, in create_upload_file
+    parsed_pdf=pp.extract_text_images_tables('./'+filename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/pdf_parsing.py", line 295, in extract_text_images_tables
+    os.mkdir('./Parsed_PDF_Output/'+doc_name_wo_type)
+FileNotFoundError: [Errno 2] No such file or directory: './Parsed_PDF_Output/Kubernetes_in_Action'
+Kubernetes_in_Action
+INFO:     127.0.0.1:59736 - "POST /uploadfile/ HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/mambaforge-pypy3/envs/gogo_env/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/Fast_Api_Server_for_PDF_Parsing.py", line 106, in create_upload_file
+    parsed_pdf=pp.extract_text_images_tables('./'+filename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix4284/MY_GEN_AI_OPEN_SOURCE_PROJECTS/MEDIUM_ARTICLES_PROJECT/GoGo/pdf_parsing.py", line 295, in extract_text_images_tables
+    os.mkdir('./Parsed_PDF_Output/'+doc_name_wo_type)
+FileNotFoundError: [Errno 2] No such file or directory: './Parsed_PDF_Output/Kubernetes_in_Action'

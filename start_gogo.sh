@@ -1,0 +1,1 @@
+streamlit run streamlit_UI_fastapi_based_file_uploader_for_parsing.py

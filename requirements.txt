@@ -1,0 +1,10 @@
+fastapi
+pandas
+requests
+streamlit
+PyMuPDF
+fitz
+numpy
+matplotlib
+uvicorn
+python-multipart
